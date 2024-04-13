@@ -28,7 +28,7 @@ const usuariosPost = (req, res = response) => {
     const { nombre, edad } = req.body;
 
     //ejemplo de respuesta del body
-    res.json({
+    res.status(201).json({
         msg: 'post API - usuariosPost',
         nombre, 
         edad
@@ -41,7 +41,7 @@ const usuariosPut = (req, res = response) => {
     const { id } = req.params;
 
     //ejemplo de respuesta del body
-    res.json({
+    res.status(201).json({
         msg: 'put API - usuariosPut',
         id
     });
@@ -54,7 +54,7 @@ const usuariosPatch = (req, res = response) => {
 }
 
 const usuariosDelete = (req, res = response) => {
-    res.json({
+    res.status(410).json({
         msg: 'delete API - usuariosDelete'
     });
 }
